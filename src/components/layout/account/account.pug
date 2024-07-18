@@ -1,0 +1,13 @@
+mixin Account(data = account)
+    section.section.account
+        .section-title Личный кабинет застройщика
+        .section-text
+            p Управление бизнесом – это управление online показателями
+        .account__items
+            each item in data.items
+                .account-item
+                    .account-item__left
+                        h4.account-item__title=item.title
+                        p.account-item__text=item.text
+                    .account-item__icon
+                        +icon(item.icon, 48)

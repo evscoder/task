@@ -1,0 +1,14 @@
+mixin Analytics(data = analytics)
+    section.section.mb-0.analytics
+        .section__header
+            h2.section-title.mb-0 Сквозная бизнес - аналитика
+        .analytics__row
+            .analytics__checks
+                each item in data.checks
+                    .analytic-check
+                        .analytic-check__icon
+                        h4.analytic-check__title=item.title
+            .analytics-bars
+                each item in data.bars
+                    .analytic-bar
+                        span.analytic-bar__label=item.text

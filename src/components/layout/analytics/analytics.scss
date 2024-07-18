@@ -1,0 +1,98 @@
+.analytics {
+    &__checks {
+        display: grid;
+        grid-gap: 30px 0;
+        max-width: 410px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @include media('<lg-tablet') {
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 32px 0;
+        }
+    }
+}
+
+.analytic-check {
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background-color: var(--gray4);
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQgMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cGF0aCBkPSJNMTEuNzkxNyAxLjIzNThDMTIuMDc5OCAxLjUzOTE0IDEyLjA2NzUgMi4wMTg2NSAxMS43NjQyIDIuMzA2ODJMNS43MDM2IDguMDY0MzlDNS40MDU3NCA4LjM0NzM1IDQuOTM2NjMgOC4zNDEzNCA0LjY0NjEzIDguMDUwODRMMi4yMjE4OSA1LjYyNjZDMS45MjYwNCA1LjMzMDc0IDEuOTI2MDQgNC44NTEwNyAyLjIyMTg5IDQuNTU1MjJDMi41MTc3NCA0LjI1OTM3IDIuOTk3NDEgNC4yNTkzNyAzLjI5MzI2IDQuNTU1MjJMNS4xOTUzOCA2LjQ1NzM0TDEwLjcyMDYgMS4yMDgzNEMxMS4wMjQgMC45MjAxNjQgMTEuNTAzNSAwLjkzMjQ2IDExLjc5MTcgMS4yMzU4WiIgZmlsbD0iI0FBQkJFNCI+PC9wYXRoPgo8L3N2Zz4K);
+        background-size: 18px 24px;
+        background-repeat: no-repeat;
+        background-position: 50% 68%;
+    }
+
+    &__title {
+        margin: 0;
+    }
+}
+
+.analytics-bars {
+    max-width: 630px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: calc(60/630*100%);
+    align-items: end;
+    margin-bottom: calc(var(--section-py) * -1);
+    padding-top: 57px;
+
+    @include media('<lg-tablet') {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.analytic-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #AABBE4;
+    border-radius: 6px 6px 0 0;
+
+    &:nth-child(1) {
+        height: 74px;
+    }
+    &:nth-child(2) {
+        height: 174px;
+    }
+    &:nth-child(3) {
+        height: 342px;
+    }
+    &:nth-child(4) {
+        height: 111px;
+    }
+    &:nth-child(5) {
+        height: 73px;
+    }
+
+    &__label {
+        position: absolute;
+        bottom: calc(100% + 11px);
+        padding: 11px 18px;
+        border-radius: 81px;
+        min-width: 50px;
+        text-align: center;
+        background-color: #282828;
+        white-space: nowrap;
+        color: var(--white);
+
+        @include media('<sm-tablet') {
+            padding: 8px 12px;
+            border-radius: 32px;
+        }
+    }
+}

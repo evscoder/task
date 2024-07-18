@@ -1,0 +1,21 @@
+extends templates/template
+append components
+    -
+        page = {
+            id: 'home',
+            title: '',
+            attrs: {},
+            content: {}
+        }
+    include ../components/layout/inclusive/inclusive
+    include ../components/layout/account/account
+    include ../components/layout/analytics/analytics
+
+block content
+    .section-card
+        .container
+            .section-card__inner
+                +Inclusive
+                +Account
+                +Analytics
+

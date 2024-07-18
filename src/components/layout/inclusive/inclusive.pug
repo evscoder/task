@@ -1,0 +1,17 @@
+mixin Inclusive(data = inclusive)
+    section.inclusive.section
+        .inclusive__header
+            h2.section-title.mb-0 Принцип all-inclusive
+            .inclusive__text.section-text
+                p Marketplace недвижимости — новые возможности и максимальная выгода для вашего бизнеса. Ключевые компетенции на рынке недвижимости.
+                p.mb-0 Грамотно выстроенная логистика клиента — сокращаем средний цикл продажи, минимизировав человеческий фактор, повышая лояльность клиента.
+        .inclusive-intro
+            .inclusive-intro__img
+                img(src='__static__assets/img/content/inclusive.jpg', alt='#')
+            .inclusive-intro__row
+                h3.inclusive-intro__title.mb-0 Самый технологичный #[br] IT-риелтор
+                .inclusive-intro__items
+                    each item in data.items
+                        .inclusive-item
+                            h4.inclusive-item__title=item.title
+                            p.inclusive-item__text=item.text

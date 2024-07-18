@@ -1,0 +1,43 @@
+.page-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content {
+    flex-grow: 1;
+    padding: var(--section-py) 0;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: 0 var(--container-gutter);
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: var(--section-py);
+
+    &__header {
+        margin-bottom: 35px;
+    }
+}
+
+.section-card {
+    &__inner {
+        border-radius: 40px;
+        padding: var(--section-py) var(--section-px);
+        background-color: var(--white);
+    }
+}
+
+.section-title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: var(--font-size-h2);
+}
+
+.section-text {
+    color: var(--gray2);
+}

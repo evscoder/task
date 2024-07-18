@@ -1,0 +1,59 @@
+:root {
+    // Colors
+    --black: #000000;
+    --black-a30: rgba(0, 0, 0, 0.30);
+    --black-a08: rgba(0, 0, 0, 0.08);
+    --gray: #F5F5F5;
+    --gray2: #8C94A4;
+    --gray3: #F8F9FD;
+    --gray4: #E3EAF9;
+    --white: #ffffff;
+    --blue: #278AFE;
+    --red: #FF5E5E;
+
+    // Colors theme
+    --primary-color: var(--blue);
+    --secondary-color: var(--blue);
+
+	--text-color: var(--black);
+
+    // Timing functions
+    --t-base: 0.2s ease-in-out;
+    --t-smooth: cubic-bezier(.215, .61, .355, 1);
+    --t-elastic: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    // Fonts
+    --font-size-base: 16px;
+    --font-family-default: 'Open Sans', sans-serif;
+    --font-family-secondary: 'Open Sans', sans-serif;
+    --font-feature: 'pnum' on, 'lnum' on;
+
+    --font-size-h2: clamp(28px, 4.8vw, 40px);
+    --font-size-h3: clamp(28px, 4.8vw, 40px);
+    --font-size-h4: clamp(18px, 4.8vw, 20px);
+
+    // Other
+    --base-container-width: 1440;
+    --container-gutter: 15px;
+    --container-width: calc(var(--base-container-width) * 1px + var(--container-gutter) * 2);
+    --section-px: 25px;
+    --section-py: 64px;
+
+    @include media('<lg') {
+
+    }
+
+    @include media('<sm-tablet') {
+        --section-px: 15px;
+        --section-py: 32px;
+    }
+
+    @include media('<sm') {
+
+    }
+}
+
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+	:root {
+    }
+}
